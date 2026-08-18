@@ -80,3 +80,70 @@ footer{padding:45px 8vw;border-top:1px solid var(--line);color:var(--muted);font
 @media(max-width:520px){
   .care-grid { grid-template-columns: 1fr; }
 }
+
+.credential-copy .eyebrow { margin-bottom: 10px; }
+.credential-copy h2 { font-size: clamp(44px, 5vw, 68px); }
+.credential-copy p { max-width: 680px; color: var(--muted); font-size: 13px; line-height: 1.8; }
+
+
+/* In the Field */
+.field {
+  padding: 115px 8vw;
+  background: #0d0c0a;
+  border-top: 1px solid var(--line);
+}
+.field-inner { max-width: 1400px; margin: 0 auto; }
+.field-head { margin-bottom: 45px; }
+.field-head h2 { margin-bottom: 0; }
+.field-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 220px;
+  gap: 12px;
+}
+.field-card {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: #15130f;
+}
+.field-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform .65s ease, filter .65s ease;
+}
+.field-card:hover img {
+  transform: scale(1.035);
+  filter: brightness(1.06);
+}
+.field-card figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 42px 15px 14px;
+  background: linear-gradient(transparent, rgba(0,0,0,.82));
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 23px;
+}
+.field-tall { grid-row: span 2; }
+.field-wide { grid-column: span 2; }
+
+@media(max-width:800px){
+  .field { padding: 80px 6vw; }
+  .field-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 210px;
+  }
+  .field-tall { grid-row: span 2; }
+}
+@media(max-width:520px){
+  .field-gallery {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 260px;
+  }
+  .field-tall, .field-wide { grid-column: span 1; grid-row: span 1; }
+}
