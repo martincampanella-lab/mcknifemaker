@@ -42,6 +42,8 @@ img{max-width:100%}
 .about-copy>p{color:var(--muted);max-width:650px;font-size:13px}
 .influences{margin-top:34px;border-top:1px solid var(--line);padding-top:24px}
 .influences p{color:var(--muted);font-size:12px}
+.Ambassadors{margin-top:34px;border-top:1px solid var(--line);padding-top:24px}
+.Ambassadors p{color:var(--muted);font-size:12px}
 .credential{margin-top:45px;border-top:1px solid var(--line);padding-top:32px}
 .credential-images{display:grid;grid-template-columns:150px 1fr;gap:16px;align-items:start;margin-bottom:28px}
 .abs-logo{width:150px;height:150px;object-fit:contain;background:#fff}
@@ -748,4 +750,160 @@ footer small {
     display: block !important;
     margin-left: auto !important;
     margin-right: auto !important;
+}
+
+/* =========================================================
+   FINAL MOBILE FIX — MC KNIFEMAKER
+   Keeps the desktop design unchanged.
+   ========================================================= */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+@media (max-width: 900px) {
+  .about,
+  .credential {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .credential {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 32px !important;
+  }
+
+  .credential-images,
+  .credential-copy {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  .credential-images {
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .credential-images .abs-diploma {
+    width: 100% !important;
+    max-width: 390px !important;
+    height: auto !important;
+  }
+
+  .credential-copy {
+    text-align: left !important;
+  }
+
+  .credential-copy h2.abs-title {
+    white-space: normal !important;
+    overflow-wrap: anywhere;
+    word-break: normal;
+    font-size: clamp(1.15rem, 5vw, 1.5rem) !important;
+    line-height: 1.2 !important;
+  }
+
+  .about-copy,
+  .credential-copy,
+  .about-copy > p,
+  .credential-copy p {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-bg {
+    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  .hero {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .hero-text {
+    max-width: 100%;
+  }
+
+  .about,
+  .credential {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .about-photo {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+  }
+
+  .about-photo img {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;
+  }
+
+  .credential {
+    gap: 28px !important;
+  }
+
+  .credential-images .abs-diploma {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  .credential-copy h2.abs-title {
+    white-space: normal !important;
+    font-size: 1.15rem !important;
+    letter-spacing: .04em !important;
+  }
+
+  .credential-copy p {
+    font-size: 12px;
+    line-height: 1.8;
+  }
+
+  .section,
+  .care,
+  .contact,
+  .social-band,
+  .field {
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .gallery,
+  .field-gallery,
+  .shop-grid {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery figure,
+  .field-card,
+  .shop-card {
+    min-width: 0;
+    max-width: 100%;
+  }
 }
