@@ -907,3 +907,237 @@ html, body {
     max-width: 100%;
   }
 }
+
+/* =========================================================
+   PRESS
+   ========================================================= */
+
+.press {
+  background: #0d0c0a;
+  border-top: 1px solid var(--line);
+}
+
+.press-card {
+  max-width: 1050px;
+  margin: 0 auto;
+  border: 1px solid var(--line);
+  background: #15130f;
+  padding: 55px 60px;
+  position: relative;
+}
+
+.press-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gold);
+}
+
+.press-content {
+  max-width: 850px;
+}
+
+.press-source {
+  color: var(--gold);
+  font-family: Cinzel, Georgia, serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+  margin: 0 0 18px;
+}
+
+.press-card h3 {
+  font-family: Cinzel, Georgia, serif;
+  font-size: clamp(25px, 3vw, 38px);
+  line-height: 1.2;
+  font-weight: 600;
+  margin: 0 0 22px;
+}
+
+.press-card p:not(.press-source) {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+  max-width: 760px;
+}
+
+.press-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--cream);
+  font-family: Cinzel, Georgia, serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 5px;
+}
+
+.press-link:hover {
+  color: var(--gold);
+}
+
+@media (max-width: 560px) {
+
+  .press-card {
+    padding: 35px 25px;
+  }
+
+  .press-card h3 {
+    font-size: 24px;
+  }
+
+  .press-card p:not(.press-source) {
+    font-size: 12px;
+  }
+
+}
+
+/* =========================================================
+   KNIFE SHOWS — 2026 CALENDAR
+   ========================================================= */
+
+.shows-section {
+  padding: 90px 24px 100px;
+  border-top: 1px solid var(--line);
+  background: var(--bg);
+}
+
+.shows-section > * {
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shows-intro {
+  text-align: center;
+  margin-bottom: 55px;
+}
+
+.shows-intro .eyebrow {
+  margin-bottom: 18px;
+}
+
+.shows-intro h2 {
+  margin-bottom: 25px;
+}
+
+.shows-intro p {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+/* Bloques de fechas */
+
+.shows-block {
+  max-width: 1180px;
+  margin: 0 auto 55px;
+}
+
+.shows-block-head {
+  margin-bottom: 25px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.shows-block-head .eyebrow {
+  margin: 0;
+}
+
+/* Lista de shows */
+
+.show-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.show-item {
+  padding: 28px 30px;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.show-item:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.show-date {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.show-item h3 {
+  margin: 0 0 10px;
+  color: var(--text);
+  font-size: 1.15rem;
+  line-height: 1.35;
+}
+
+.show-item p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* Nota final */
+
+.shows-note {
+  max-width: 900px;
+  margin: 55px auto 0;
+  padding-top: 25px;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.shows-archive {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+  .shows-section {
+    padding: 65px 20px 75px;
+  }
+
+  .shows-intro {
+    margin-bottom: 40px;
+  }
+
+  .show-list {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .show-item {
+    padding: 23px 22px;
+  }
+
+  .show-item h3 {
+    font-size: 1.05rem;
+  }
+
+}
