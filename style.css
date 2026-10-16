@@ -1141,3 +1141,87 @@ html, body {
   }
 
 }
+
+
+/* =========================================================
+   GALLERY — MC KNIFEMAKER COLLECTIONS
+   ========================================================= */
+
+.gallery-section {
+  background: var(--bg);
+}
+
+.gallery-category {
+  margin-top: 70px;
+}
+
+.gallery-category-head {
+  border-top: 1px solid var(--line);
+  padding-top: 22px;
+  margin-bottom: 24px;
+}
+
+.gallery-category-head .eyebrow {
+  margin: 0;
+  color: var(--gold);
+}
+
+/* Three columns on desktop */
+
+.gallery-category .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.gallery-category .gallery figure {
+  margin: 0;
+  padding: 0;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+}
+
+.gallery-category .gallery figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  transition: transform .4s ease;
+}
+
+.gallery-category .gallery figure:hover img {
+  transform: scale(1.025);
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .gallery-category {
+    margin-top: 55px;
+  }
+
+  .gallery-category .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 560px) {
+  .gallery-category {
+    margin-top: 45px;
+  }
+
+  .gallery-category .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .gallery-category .gallery figure {
+    aspect-ratio: 3 / 4;
+  }
+}
