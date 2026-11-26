@@ -1,1 +1,161 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Small Nessmuk Knife | MC Knifemaker</title>
+  <meta name="description" content="Small Nessmuk Knife handcrafted by MC Knifemaker. 1070 carbon steel, red deer stag scales and leather pouch sheath.">
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .knife-detail {
+      max-width: 1150px;
+      margin: 0 auto;
+      padding: 110px 30px 80px;
+      color: var(--text);
+    }
+
+    .knife-detail-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 55px;
+      align-items: start;
+    }
+
+    .knife-main-image {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4 / 5;
+      object-fit: contain;
+      background: var(--panel);
+    }
+
+    .knife-thumbnails {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .knife-thumbnails img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      cursor: pointer;
+      border: 1px solid var(--line);
+    }
+
+    .knife-info h1 {
+      margin: 12px 0 18px;
+    }
+
+    .knife-sold {
+      color: var(--gold);
+      letter-spacing: 3px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .knife-specs {
+      margin-top: 35px;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+    }
+
+    .knife-specs h2 {
+      font-size: 16px;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    .knife-specs ul {
+      padding-left: 20px;
+      line-height: 2;
+      color: var(--muted);
+    }
+
+    .knife-back {
+      display: inline-block;
+      margin-top: 35px;
+      color: var(--gold);
+      text-decoration: none;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 760px) {
+      .knife-detail {
+        padding: 90px 20px 55px;
+      }
+
+      .knife-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<section class="knife-detail">
+  <div class="knife-detail-grid">
+
+    <div class="knife-gallery">
+      <img
+        id="mainKnifeImage"
+        class="knife-main-image"
+        src="assets/shop/knives/small-nessmuk/nessmuk1.jpeg"
+        alt="Small Nessmuk Knife by MC Knifemaker"
+      >
+
+      <div class="knife-thumbnails">
+        <img
+          src="assets/shop/knives/small-nessmuk/nessmuk1.jpeg"
+          alt="Small Nessmuk Knife"
+          onclick="document.getElementById('mainKnifeImage').src=this.src"
+        >
+        <img
+          src="assets/shop/knives/small-nessmuk/nessmuk2.jpeg"
+          alt="Small Nessmuk Knife with leather sheath"
+          onclick="document.getElementById('mainKnifeImage').src=this.src"
+        >
+        <img
+          src="assets/shop/knives/small-nessmuk/nessmuk3.jpeg"
+          alt="Small Nessmuk Knife sheath detail"
+          onclick="document.getElementById('mainKnifeImage').src=this.src"
+        >
+      </div>
+    </div>
+
+    <div class="knife-info">
+      <p class="eyebrow">MC KNIFEMAKER · CUSTOM KNIVES</p>
+
+      <h1>SMALL NESSMUK KNIFE</h1>
+
+      <p class="knife-sold">SOLD</p>
+
+      <div class="knife-specs">
+        <h2>SPECIFICATIONS</h2>
+
+        <ul>
+          <li>1070 Carbon Steel</li>
+          <li>Blade Length: 4"</li>
+          <li>Stock Thickness: 4 mm</li>
+          <li>OAL (Overall Length): 8.5"</li>
+          <li>Red Deer Stag Scales</li>
+          <li>Leather Pouch Sheath</li>
+        </ul>
+      </div>
+
+      <a class="knife-back" href="index.html#shop">
+        ← BACK TO SHOP
+      </a>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
+
